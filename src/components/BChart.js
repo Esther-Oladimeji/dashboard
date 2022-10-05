@@ -1,50 +1,42 @@
-import {
-    BarChart,
-    Bar,
-    Brush,
-    ReferenceLine,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    Legend,
-    ResponsiveContainer,
-  } from 'recharts';
-  
-  const data = [
-    { name: '1', uv: 300, },
-    { name: '2', uv: 145,  },
-    { name: '3', uv: 100,},
-    { name: '4', uv: 8 },
-    { name: '5', uv: 100 },
-   
-  ];
-  
- const BChart = () => {
-      return (
-        <ResponsiveContainer width="50%" aspect = {1}>
-          <BarChart
-            width={500}
-            height= {300}
-            data={data}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend verticalAlign="top" wrapperStyle={{ lineHeight: '40px' }} />
-            <ReferenceLine y={0} stroke="#000" />
-            <Bar dataKey="pv" fill="#8884d8" />
+import React from 'react';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
+import styled from "styled-components"
+ChartJS.register(ArcElement, Tooltip, Legend);
 
-          </BarChart>
-        </ResponsiveContainer>
-      );
-  }
+export const data = {
+  labels: ['Red', 'Blue', 'Yellow', ],
+  datasets: [
+    {
+      label: '# of Votes',
+      data: [12, 19, 3,],
+      backgroundColor: [
+        'rgb(40, 40, 43)',
+        "rgb(54, 69, 79)",
+        'rgb(52, 52, 52)',
+        ,
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        ,
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
 
-  export default BChart
+export default function BChart() {
+  return(
+    <PieStyle>
+    <Pie data={data} width={40}
+  height={60}
+  options={{ maintainAspectRatio: false }}/>
+  </PieStyle>
+  )
+}
+
+const PieStyle = styled.div`
+width: 40%;
+`

@@ -25,14 +25,13 @@ const Featured = () => {
 export default Featured
 
 const FeaturedStyle = styled.div`
-width: 100%;
 display: flex;
 justify-content: space-between;
+margin-bottom: 3rem;
 `
 const FeaturedItems = styled.div`
-flex: 1;
-margin : 0 20px;
-padding: 30px;
+margin : 0 10px;
+padding: 20px ;
 border-radius: 10px;
 cursor: pointer;
 box-shadow: 0 0 15px -10px rgba( 0 ,0, 0, 0.75)

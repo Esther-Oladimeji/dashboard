@@ -33,7 +33,7 @@ const Sidebar = () => {
                         </SidebarListItem>
                         <SidebarListItem>
                             <TheTrendingUp/>
-                            Sales
+                            <Link to = "/calender" className = "link"> Calender</Link>
                         </SidebarListItem>
                     </SidebarList>
 
@@ -64,12 +64,11 @@ const Sidebar = () => {
 export default Sidebar
 
 const SidebarStyle = styled.div`
-flex: 1;
 height: calc(100vh - 50px);
 background-color: #000000;
 position: sticky;
 top: 50px;
-width: 500px;
+width: 15%;
 `
 const SidebarWrapper = styled.div`
 padding: 20px;
