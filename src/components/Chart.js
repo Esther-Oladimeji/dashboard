@@ -70,7 +70,9 @@ export default function Chart() {
 }
 
 const ChartStyle = styled.div `
-width: 40%;
+width: 70%; 
+margin:0 20px 0 10px;
+background-color: white;
 -webkit-box-shadow: 0 0  15px -10px rgba(0, 0, 0, 0.75);
 box-shadow: 0 0  15px -10px rgba(0, 0, 0, 0.75);
 `

@@ -16,8 +16,8 @@ const HomeCharts = () => {
 export default HomeCharts
 
 const ChartStyles = styled.div`
-margin: 40px 0;
-height: 35%;
+margin: 30px 0;
+height: 300px;
 display: flex;
 justify-content: space-around;
 .charts-container{

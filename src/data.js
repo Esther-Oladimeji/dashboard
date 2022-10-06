@@ -1,7 +1,7 @@
 export const featuredData = [
     {
-        name: "Revenue",
-        amount: "£20,000",
+        name: "Sales",
+        amount: "£1,000,000",
         rate: "3.2"
     }, {
         name: "Cost",

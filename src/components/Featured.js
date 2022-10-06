@@ -27,14 +27,15 @@ export default Featured
 const FeaturedStyle = styled.div`
 display: flex;
 justify-content: space-between;
-margin-bottom: 3rem;
+
 `
 const FeaturedItems = styled.div`
-margin : 0 10px;
+margin : 0 3px;
 padding: 20px ;
 border-radius: 10px;
 cursor: pointer;
-box-shadow: 0 0 15px -10px rgba( 0 ,0, 0, 0.75)
+box-shadow: 0 0 15px -10px rgba( 0 ,0, 0, 0.75);
+background-color: white;
 `
 const FeaturedName = styled.div`
 font-size: 20px;
@@ -43,6 +44,7 @@ const FeaturedMoneyContainer = styled.div`
 display: flex;
 align-items: center;
 margin: 10px 0;
+
 .featured-amount{
 font-size: 30px;
 font-weight: 600;

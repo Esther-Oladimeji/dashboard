@@ -8,7 +8,7 @@ const Navbar = () => {
         <NavbarStyle>
             <NavbarWrapper>
                 <NavbarLeft>
-                    <Logo>CAR ADMIN</Logo>
+                    <Logo>Welcome, Dami</Logo>
                 </NavbarLeft>
                 <NavbarRight>
                     <NavbarIcon>
@@ -32,9 +32,11 @@ export default Navbar
 const NavbarStyle = styled.div `
 width: 100%;
 height: 50px;
-background-color: black;
-overflow: visible;
-color: white;
+
+overflow: auto;
+border-radius: 5px;
+top: 0;
+padding: 14px 0 20px;
 `
 
 const NavbarWrapper = styled.div `
@@ -50,9 +52,8 @@ position: -webkit-sticky;
 
 const Logo = styled.span `
 cursor: pointer;
-color: #fff;
 font-weight: bold;
-font-size: 30px;
+font-size: 20px;
 `
 
 const NavbarLeft = styled.div `

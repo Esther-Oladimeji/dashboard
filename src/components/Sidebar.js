@@ -39,7 +39,6 @@ const Sidebar = () => {
 
                 </SidebarMenu>
                 <SidebarMenu>
-                    <SidebarTitle>All Menu</SidebarTitle>
                     <SidebarList>
                         <SidebarListItem>
                         <ThePermIdentity/>
@@ -64,11 +63,12 @@ const Sidebar = () => {
 export default Sidebar
 
 const SidebarStyle = styled.div`
-height: calc(100vh - 50px);
-background-color: #000000;
+height: 100vh;
+background-color: rgb(54, 69, 79);
 position: sticky;
-top: 50px;
 width: 15%;
+overflow: auto;
+top: 0;
 `
 const SidebarWrapper = styled.div`
 padding: 20px;

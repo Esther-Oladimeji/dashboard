@@ -7,10 +7,11 @@ import LargeWidget from '../components/LargeWidget'
 import SmallWidget from '../components/SmallWidget'
 import BChart from '../components/BChart'
 import HomeCharts from '../components/HomeCharts'
-
+import Navbar from '../components/Navbar'
 export default function Home() {
     return (
         <HomeStyle>
+        <Navbar />
             <Featured/>
             <HomeCharts/>
             <div className="widget-styling">
@@ -21,7 +22,8 @@ export default function Home() {
 }
 
 const HomeStyle = styled.div `
-max-width: 85%;
-margin-left: 10px;
-
+width: 100%;
+margin: 0 10px;
+display: flex;
+flex-direction: column;
 `

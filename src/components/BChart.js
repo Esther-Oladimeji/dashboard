@@ -30,13 +30,19 @@ export const data = {
 export default function BChart() {
   return(
     <PieStyle>
-    <Pie data={data} width={40}
-  height={60}
-  options={{ maintainAspectRatio: false }}/>
+    <div>
+    <Pie data={data} width={70}
+  height={70}
+  options={{ maintainAspectRatio: true }}/>
+  </div>
   </PieStyle>
   )
 }
 
 const PieStyle = styled.div`
-width: 40%;
+width: 30%;
+background-color: white;
+-webkit-box-shadow: 0 0  15px -10px rgba(0, 0, 0, 0.75);
+box-shadow: 0 0  15px -10px rgba(0, 0, 0, 0.75);
+
 `
