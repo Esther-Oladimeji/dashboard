@@ -3,17 +3,19 @@ export const featuredData = [
         name: "Sales",
         amount: "£1,000,000",
         rate: "3.2"
-    }, {
-        name: "Cost",
-        amount: "£7,500",
-        rate: "3.2"
-    }, {
-        name: "Sales",
+    }, 
+    {
+        name: "Costs",
         amount: "£48,000",
         rate: "3.2"
-    }, {
-        name: "Sales",
-        amount: "£48,000",
+    },
+    {
+        name: "New Users",
+        amount: "257",
+        rate: "3.2"
+    }, , {
+        name: "Growth",
+        amount: "24%",
         rate: "3.2"
     }
 ];

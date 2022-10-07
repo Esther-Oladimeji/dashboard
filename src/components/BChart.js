@@ -2,14 +2,17 @@ import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import styled from "styled-components"
+import {faker} from '@faker-js/faker';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+const labels= ['Red', 'Blue', 'Yellow' ]
+
 export const data = {
-  labels: ['Red', 'Blue', 'Yellow', ],
+  labels,
   datasets: [
     {
       label: '# of Votes',
-      data: [12, 19, 3,],
+      data: labels.map(() => faker.datatype.number({min: -1000, max: 1000})),
       backgroundColor: [
         'rgb(40, 40, 43)',
         "rgb(54, 69, 79)",
@@ -33,7 +36,7 @@ export default function BChart() {
     <div>
     <Pie data={data} width={70}
   height={70}
-  options={{ maintainAspectRatio: true }}/>
+  options={{ maintainAspectRatio: false }}/>
   </div>
   </PieStyle>
   )

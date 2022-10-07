@@ -7,7 +7,8 @@ import LargeWidget from '../components/LargeWidget'
 import SmallWidget from '../components/SmallWidget'
 import BChart from '../components/BChart'
 import HomeCharts from '../components/HomeCharts'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
+
 export default function Home() {
     return (
         <HomeStyle>
@@ -16,6 +17,7 @@ export default function Home() {
             <HomeCharts/>
             <div className="widget-styling">
                 <SmallWidget/>
+               
             </div>
         </HomeStyle>
     )

@@ -69,6 +69,7 @@ position: sticky;
 width: 15%;
 overflow: auto;
 top: 0;
+box-shadow: 0 0 15px -10px rgba( 0 ,0, 0, 0.75);
 `
 const SidebarWrapper = styled.div`
 padding: 20px;

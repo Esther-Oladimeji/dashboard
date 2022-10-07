@@ -3,13 +3,9 @@ import MaterialTable, { MTableToolbar } from 'material-table';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { forwardRef } from 'react';
 import styled from "styled-components"
-import AddBox from '@material-ui/icons/AddBox';
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
-import Check from '@material-ui/icons/Check';
-import ChevronLeft from '@material-ui/icons/ChevronLeft';
+import {AddBox, Clear,DeleteOutline,ArrowDownward,Check,ChevronLeft  }from '@material-ui/icons';
 import ChevronRight from '@material-ui/icons/ChevronRight';
-import Clear from '@material-ui/icons/Clear';
-import DeleteOutline from '@material-ui/icons/DeleteOutline';
+
 import Edit from '@material-ui/icons/Edit';
 import FilterList from '@material-ui/icons/FilterList';
 import FirstPage from '@material-ui/icons/FirstPage';
@@ -18,6 +14,8 @@ import Remove from '@material-ui/icons/Remove';
 import SaveAlt from '@material-ui/icons/SaveAlt';
 import Search from '@material-ui/icons/Search';
 import ViewColumn from '@material-ui/icons/ViewColumn';
+import Userdata from "../components/Userdata"
+import MockData from "../MOCK_DATA.json"
 
 
 export default function Customers() {
@@ -44,23 +42,30 @@ export default function Customers() {
     ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
   };
   const [columns, setColumns] = useState([
-    { title: 'Name', field: 'name' },
-    { title: 'Surname', field: 'surname', initialEditValue: 'initial edit value' },
-    { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
     {
-      title: 'Birth Place',
-      field: 'birthCity',
-      lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' },
+      title: 'No',
+      field: 'id',
+
+    },
+    { title: 'Full Name', field: 'full_name' },
+    { title: 'email', field: 'email', initialEditValue: 'initial edit value' },
+    { title: 'Country', field: 'country', },
+    {
+      title: 'Plan',
+      field: 'plan',
+    },
+    {
+      title: 'Price',
+      field: 'price',
+
     },
   ]);
 
-  const [data, setData] = useState([
-    { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
-    { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
-  ]);
-  
+  const [data, setData] = useState(MockData);
   return (
     <TableStyle>
+    <Userdata />
+    <div className= "customer-list">
     <ThemeProvider theme={defaultMaterialTheme}>
     <MaterialTable
     icons={tableIcons}
@@ -101,11 +106,15 @@ export default function Customers() {
       }}
     />
     </ThemeProvider>
+    </div>
     </TableStyle>
   )
 }
 
 const TableStyle = styled.div`
+margin: 5px 20px;
 width: 85%;
-min-height: 100%;
+.customer-list{
+  margin-top: 20px;
+}
 `

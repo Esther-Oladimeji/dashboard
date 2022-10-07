@@ -26,19 +26,20 @@ export default Featured
 
 const FeaturedStyle = styled.div`
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 
 `
 const FeaturedItems = styled.div`
-margin : 0 3px;
-padding: 20px ;
+margin : 0 5px;
+padding: 10px ;
 border-radius: 10px;
 cursor: pointer;
 box-shadow: 0 0 15px -10px rgba( 0 ,0, 0, 0.75);
 background-color: white;
+flex: 1 1 0px;
 `
 const FeaturedName = styled.div`
-font-size: 20px;
+font-size: 15px;
 `
 const FeaturedMoneyContainer = styled.div`
 display: flex;
@@ -46,7 +47,7 @@ align-items: center;
 margin: 10px 0;
 
 .featured-amount{
-font-size: 30px;
+font-size: 25px;
 font-weight: 600;
 }
 .featured-rate{
